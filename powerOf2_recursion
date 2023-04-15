@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int powerOf2(int n) {
+if (n==0) {
+    return 1;
+}
+int smallOutput = powerOf2(n-1);
+return smallOutput * 2;
+
+
+
+}
+int main() {
+int n;
+cout <<"enter the number: ";
+cin >> n;
+cout <<powerOf2(n);
+
+}
