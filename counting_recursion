@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+int counting(int n) {
+if (n==0) {
+    return 0;
+}
+cout << n <<endl;
+int SmallProblem = counting(n-1);
+return SmallProblem;
+
+}
+int counting2(int n) {
+if (n == 0) {
+    return 0;
+}
+int smallProblem = counting2(n-1);
+cout << n <<endl;
+return smallProblem;
+
+}
+int main() {
+int n;
+cout <<"enter the number: ";
+cin >> n;
+cout <<"first series :" <<endl<<counting(n) <<endl;
+cout <<  "second series :" <<endl<<counting2(n) ;
+
+}
