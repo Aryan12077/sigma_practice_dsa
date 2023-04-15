@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int PowerofNumber(int x, int n) {
+if (n == 0) {
+    return 1;
+}
+int smalloutput = x*PowerofNumber(x,(n-1));
+return smalloutput;
+}
+
+int main() {
+int x,n;
+cout <<"enter the number: ";
+cin >> x;
+cout <<"enter the power: ";
+cin >> n;
+int output = PowerofNumber(x,n);
+cout << output;
+
+
+}
