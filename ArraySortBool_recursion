@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+//create a recursive function which returns true or false
+bool isSortedArray(int a[], int size) {
+if (size == 0 || size==1) {
+    return true;
+}
+
+if (a[0] > a[1]) {
+    return false;
+}
+bool smalleroutput = isSortedArray(a + 1, size - 1);
+return smalleroutput;
+}
+
+int main() {
+int a[5] = {1,2,3,4,5};
+int size = sizeof(a)/sizeof(a[0]);
+return isSortedArray(a, size);
+}
