@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+bool checkNumber(int array[], int n, int x) {
+if (n==0) {
+    return false;
+}
+if (x == array[0]) {
+    return true;
+}
+bool checksmallerarray = checkNumber(array + 1, n - 1, x);
+return checksmallerarray;
+
+}
+
+
+int main() {
+int n;
+cout << "enter the size of array: ";
+cin >> n;
+int array[10];
+cout << "enter the elements of array: ";
+for(int i = 0; i<n; i++) {
+    cin >> array[i];
+}
+
+int x;
+cout << "enter the number to be searched: ";
+cin >> x;
+
+return checkNumber(array, n, x);
+}
