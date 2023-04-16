@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int print1ToN(int n) {
+if (n==0) {
+    return 0;
+}
+int smalloutput = print1ToN(n-1);
+cout << n << " ";
+return smalloutput;
+}
+
+int main() {
+int n;
+cout <<"enter the number: ";
+cin >>n;
+int output = print1ToN(n);
+cout << output <<endl;
+}
