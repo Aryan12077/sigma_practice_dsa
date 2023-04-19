@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int Multiply(int m, int n) {
+if(m ==0 || n ==0) {
+    return 0;
+}
+if (m==1) {
+   return n;
+}
+int smalloutput = m + Multiply(m,(n-1));
+return smalloutput;
+
+
+}
+
+int main () {
+int m,n;
+cout << "enter the two numbers: ";
+cin >> m;
+cin >> n;
+
+int ans = Multiply(m,n);
+cout << ans;
+}
