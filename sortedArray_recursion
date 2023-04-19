@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int SortedArray (int array[], int n) {
+if(n==0 || n==1) {
+    return -1;
+}
+if(array[0]<array[1]) {
+    return 0;
+}
+else {
+    return -1;
+}
+int smalloutput = SortedArray(array+1, n-1);
+return smalloutput;
+
+}
+
+int main() {
+int n;
+cin >> n;
+int array[10];
+for(int i = 0; i<n; i++) {
+    cin >> array[i];
+
+}
+int ans = SortedArray(array, n);
+cout << ans;
+
+
+}
