@@ -1,0 +1,18 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+double geometricSum(int n) {
+if (n==0) {
+    return 1;
+}
+double smalloutput = (1/pow(2, n)) + geometricSum(n-1);
+return smalloutput;
+
+}
+
+int main() {
+    int n;
+    cin >> n;
+    double output = geometricSum(n);
+    cout <<output;
+}
