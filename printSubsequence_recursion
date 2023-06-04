@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+void Print_subsequence(string input, string output) {
+    if(input.length() == 0) {
+        cout << output << endl;
+        return;
+    }
+    Print_subsequence(input.substr(1), output);
+    Print_subsequence(input.substr(1), output + input[0]);
+
+}
+
+int main () {
+string input;
+cin>> input;
+string output = "";
+Print_subsequence(input, output);
+
+}
