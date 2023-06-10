@@ -27,8 +27,10 @@ return head;
 
 int length(Node *head) {
     int length = 0;
-while(head != NULL) {
-        head = head -> next;
+    Node *temp = head;
+    //creating temporary pointer so that address of head is not lost
+while(temp != NULL) {
+        temp = temp -> next;
         length ++;
 
 }
